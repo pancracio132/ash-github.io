@@ -2,46 +2,57 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Feliz Cumpleaños Artístico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feliz Cumpleaños</title>
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Fondo de fresas -->
   <div class="fresas" id="fresas"></div>
 
+  <!-- Fresas interactivas -->
   <div class="fresa-interactiva fresa1" onclick="animarFresa(this)">🍓</div>
   <div class="fresa-interactiva fresa2" onclick="animarFresa(this)">🍓</div>
   <div class="fresa-interactiva fresa3" onclick="animarFresa(this)">🍓</div>
 
+  <!-- Contenido principal -->
   <div class="container">
+
     <div class="card">
+
       <div class="emoji">🍓🎨✨</div>
+
       <h1>¡Feliz Cumpleaños!</h1>
 
       <p>
-        Hoy celebramos a una persona tan creativa como una obra maestra pintada con colores infinitos.
+        Hoy celebramos a una persona tan creativa como una obra maestra llena de colores.
       </p>
 
       <p>
-        Que cada pincelada de tu vida esté llena de inspiración, sueños y momentos hermosos.
+        Que cada pincelada de tu vida esté llena de inspiración, sueños y felicidad.
       </p>
 
       <div class="arte-box">
         “El arte convierte emociones en colores… y tú haces que el mundo tenga más color.” 🎨🍓
       </div>
 
-      <button onclick="mostrarMensaje()">Presiona aquí ✨</button>
+      <button onclick="mostrarMensaje()">
+        Presiona aquí ✨
+      </button>
 
       <div class="mensaje" id="mensaje"></div>
 
       <footer>
         Hecho con fresas, arte y mucho cariño 🍓🖌️
       </footer>
+
     </div>
+
   </div>
 
   <script src="j.js"></script>
+
 </body>
 </html>
