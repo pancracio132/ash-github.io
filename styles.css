@@ -1,0 +1,194 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#ffd6e0,#ffe8d1);
+  overflow:hidden;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+}
+
+/* CONTENEDOR */
+
+.container{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  z-index:2;
+}
+
+.card{
+  background:rgba(255,255,255,0.85);
+  padding:40px;
+  border-radius:30px;
+  max-width:700px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  backdrop-filter:blur(10px);
+}
+
+/* TEXTOS */
+
+h1{
+  font-size:3rem;
+  color:#e63971;
+  margin-bottom:20px;
+}
+
+p{
+  font-size:1.2rem;
+  line-height:1.7;
+  margin-bottom:15px;
+  color:#6b1d2a;
+}
+
+.emoji{
+  font-size:3rem;
+  margin-bottom:15px;
+}
+
+.arte-box{
+  background:linear-gradient(135deg,#ff9eb5,#ffb38a);
+  color:white;
+  padding:20px;
+  border-radius:20px;
+  margin-top:20px;
+  font-weight:bold;
+}
+
+/* BOTON */
+
+button{
+  margin-top:25px;
+  padding:14px 28px;
+  border:none;
+  border-radius:40px;
+  background:#ff4f7a;
+  color:white;
+  font-size:1rem;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.1);
+  background:#d7265d;
+}
+
+.mensaje{
+  margin-top:20px;
+  min-height:40px;
+  font-size:1.1rem;
+  color:#8b1e3f;
+}
+
+/* FRESAS QUE CAEN */
+
+.fresas{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  pointer-events:none;
+}
+
+.fresa{
+  position:absolute;
+  font-size:2rem;
+  animation:caer linear infinite;
+}
+
+@keyframes caer{
+  from{
+    transform:translateY(-100px) rotate(0deg);
+  }
+
+  to{
+    transform:translateY(110vh) rotate(360deg);
+  }
+}
+
+/* FRESAS INTERACTIVAS */
+
+.fresa-interactiva{
+  position:fixed;
+  font-size:4rem;
+  cursor:pointer;
+  z-index:3;
+  animation:flotar 3s ease-in-out infinite;
+  transition:0.3s;
+  user-select:none;
+}
+
+.fresa-interactiva:hover{
+  transform:scale(1.2) rotate(10deg);
+}
+
+.fresa1{
+  top:10%;
+  left:8%;
+}
+
+.fresa2{
+  top:65%;
+  right:8%;
+}
+
+.fresa3{
+  bottom:8%;
+  left:18%;
+}
+
+@keyframes flotar{
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+/* FOOTER */
+
+footer{
+  margin-top:25px;
+  color:#7a3b50;
+  opacity:0.8;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:700px){
+
+  h1{
+    font-size:2.2rem;
+  }
+
+  p{
+    font-size:1rem;
+  }
+
+  .card{
+    padding:25px;
+  }
+
+  .fresa-interactiva{
+    font-size:3rem;
+  }
+
+}
